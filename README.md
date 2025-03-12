@@ -8,14 +8,14 @@ Um jogo desenvolvido para praticar lógica de programação e consolidar conheci
 
 Este projeto consiste em um **jogo de adivinhação** onde o jogador deve tentar descobrir um número aleatório gerado pelo computador dentro de um intervalo de **1 a 100**.  
 
-Durante o curso de **JavaScript e HTML** na [Alura](https://cursos.alura.com.br/), foi proposto um desafio aos participantes: desenvolver um jogo para praticar lógica de programação.  
+Durante o curso de **JavaScript, HTML e CSS** na [Alura](https://cursos.alura.com.br/), foi proposto um desafio aos participantes: desenvolver um jogo para praticar lógica de programação.  
 
 O jogo foi sendo aprimorado ao longo das aulas, consolidando o aprendizado com novas implementações e oferecendo uma experiência prática e desafiadora para os estudantes.  
 
 ---
 
 ## 🚀 **Jogue Agora!**  
-🔗 **[Acesse a página do jogo](#)** *(adicione o link do jogo aqui)*  
+🔗 **[Acesse a página do jogo](#)** *((https://jeffersonformigoni.github.io/jogodeadvinhacao/))*  
 
 ---
 
