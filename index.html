@@ -1,31 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
-        rel="stylesheet">
+    <title>Desafio do Adivinhador 🔮</title>
     <link rel="stylesheet" href="style.css">
-    <title>JS Game</title>
+    <link rel="shortcut icon" href="witch-hat.ico" type="image/x-icon">  
 </head>
-
 <body>
-    <div class="container">
-        <div class="container__conteudo">
-            <img src="./img/robot.png" alt="robô mergulhador" class="container__imagem-robo" />
-            <div class="container__informacoes">
-                <img src="./img/trophy.png" alt="ícone de um troféu" />
-                 <div class="container__texto">
-                    <h1>Você <span class="container__texto-azul">acertou!</span></h1>
-                    <h2>Você descobriu o número secreto!</h2>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="app.js" defer></script>
-</body>
 
+    <div class="container">
+        <h1>🔮 O Grande Adivinhador 🔮</h1>
+        <p id="mensagem-inicial">Estou pensando em um número entre <strong>1 e 100</strong>...</p>
+        <p>Você tem apenas <span id="tentativas">10</span> tentativas!</p>
+        
+        <input type="number" id="numeroChute" placeholder="Digite um número">
+        <button onclick="verificaChute()" id="botaoChute">🔍 Adivinhar</button> 
+        
+        <p id="feedback"></p>
+        <p id="dicas"></p>
+    </div>
+
+    <footer>
+        <p>
+            Jogo criado por 
+            <a href="https://github.com/jeffersonformigoni" target="_blank" aria-label="Perfil de Jefferson Formigoni no GitHub">
+                Jefferson Formigoni <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="Ícone GitHub" width="16">
+            </a> 
+            durante o curso da 
+            <a href="https://cursos.alura.com.br/course/logica-programacao-mergulhe-programacao-javascript" target="_blank" aria-label="Curso de lógica de programação da Alura">Alura</a>.
+        </p>
+    </footer>
+    
+ 
+    <script src="script.js"></script>
+
+</body>
 </html>
