@@ -1,10 +1,10 @@
-// Exibir alerta de boas-vindas ao carregar a página
-setTimeout(() => {
-    alert("Você se considera bom em adivinhação? Vamos jogar um jogo!");
-}, 300);
-
 // Variável para definir dinamicamente o intervalo dos números
 let intervaloMaximo = 100; // Altere esse valor para mudar o intervalo
+
+// Verificação do intervalo máximo
+if (intervaloMaximo < 1) {
+    intervaloMaximo = 100;
+}
 
 // Pegando elementos do DOM
 const campoChute = document.getElementById("numeroChute");
@@ -39,21 +39,16 @@ function verificaChute() {
         dicas.innerHTML = `<button onclick="reiniciarJogo()">🔄 Jogar novamente</button>`;
         botaoChute.disabled = true;
         campoChute.disabled = true;
-        return;
-    }
-
-    if (tentativas > 0) {
-        if (chute < numeroPensado) {
-            feedback.innerHTML = "📉 Tente um número maior!";
-        } else {
-            feedback.innerHTML = "📈 Tente um número menor!";
-        }
-        tentativasRestantes.textContent = tentativas;
     } else {
-        feedback.innerHTML = `😢 Você perdeu! O número era ${numeroPensado}.`;
-        dicas.innerHTML = `<button onclick="reiniciarJogo()">🔄 Tentar novamente</button>`;
-        botaoChute.disabled = true;
-        campoChute.disabled = true;
+        feedback.innerHTML = chute < numeroPensado ? "📉 Tente um número maior!" : "📈 Tente um número menor!";
+        tentativasRestantes.textContent = tentativas;
+
+        if (tentativas === 0) {
+            feedback.innerHTML = `😢 Você perdeu! O número era ${numeroPensado}.`;
+            dicas.innerHTML = `<button onclick="reiniciarJogo()">🔄 Tentar novamente</button>`;
+            botaoChute.disabled = true;
+            campoChute.disabled = true;
+        }
     }
 
     campoChute.value = "";
